@@ -1,0 +1,12 @@
+
+
+#MPI CLUSTER SETUP /ETC/FSTAB
+atila:/home/mpiuser/cloud /home/mpiuser/cloud nfs
+
+#NAS MAQUINAS
+sudo mount -t nfs atila:/home/mpiuser/cloud ~/cloud
+
+#COMPILAR
+sudo cp /home/atila/Documentos/ProgramasMeus/Vagrant-um/MD5/main.cpp /home/mpiuser/cloud
+mpic++ -o main md5.cpp hash.cpp main.cpp
+mpirun -hostfile hostfile -np 4 ./main
