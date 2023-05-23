@@ -20,7 +20,6 @@ int main(int argc, char** argv)
     std::string senha = "ffff";
 
 
-
     if (rank == 0) {
         std::cout<<"Seu hash(descoberto na vm1):"<<aux.verificarHashMaq1(senha)<<endl;
 
